@@ -1,0 +1,6 @@
+<h1><%= @destination.name %></h1>
+<p> The Newest 5 Destinations: <%= @destination.five_most_recent_posts%></p>
+<br>
+<p>THE destination with the most likes: <%=link_to @destination.featured_destination.title, destination_path(@destination.featured_destination) %></p>
+<br>
+<p> The Average age of our travelers: <%= @destination.average_age%> </p>

@@ -1,0 +1,7 @@
+<h1>This is the Index page of the destinations</h1>
+
+<ul>
+  <% @destination.each do |destination| %>
+    <li><%= link_to destination.name, destination_path(destination) %></li>
+  <% end %>
+</ul> 

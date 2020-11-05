@@ -1,0 +1,13 @@
+<h1><%= @blogger.name%></h1>
+
+<p>Bloggers Age :<%= @blogger.age %></p>
+<p>Bloggers Bio :<%= @blogger.bio %></p>
+
+<% @blogger.posts.each do |post |%>
+<p> Blogger <%= post.title%> -  <%= post.likes%> </p>
+<%end %> 
+
+<p>Total Likes:
+<%= @blogger.total_likes %></p>
+<p>Featured Post: <%= @blogger.featured_post.title %></p>
+<%= link_to "Featured Post", post_path(@blogger.featured_post.id) %>

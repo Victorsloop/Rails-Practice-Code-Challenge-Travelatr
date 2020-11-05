@@ -1,0 +1,7 @@
+<h1>This is the Index page of the bloggers</h1>
+
+<ul>
+  <% @blogger.each do |blogger| %>
+    <li><%= link_to blogger.name, blogger_path(blogger) %></li>
+  <% end %>
+</ul> 

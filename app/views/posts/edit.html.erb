@@ -1,0 +1,16 @@
+<h1>EDITING <%=@post.title%></h1>
+<%= form_for @post do |f|%>
+<%= f.label :title%>
+<%= f.text_field :title%>
+<br>
+<%= f.label :content%>
+<%= f.text_field :content%>
+<br>
+<%= f.label :blogger %>
+<%= f.collection_select :blogger_id, Blogger.all, :id, :name %>
+<br>
+<%= f.label :destination %>
+<%= f.collection_select :destination_id, Destination.all, :id ,:name %>
+<br>
+<%= f.submit%>
+<%end%>
